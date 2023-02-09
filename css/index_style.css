@@ -1,0 +1,800 @@
+@import "default.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+body{
+    background:#fff; color:#222; font-size:16px;
+    font-family:"Noto Sans KR", '맑은 고딕', sans-serif;
+    overflow-x:hidden;
+}
+a{ color:#222;}
+.desk{   display:block !important;   }
+.tablet, .mobile{    display:none !important;   }
+
+.tnb_box{ 
+    width:100%; height:56px; background:#222; position:relative;
+    
+}
+.tnb_box>.tnb{ 
+    width:350px; height:30px; 
+    position:absolute; right:40px; top:14px;
+}
+.tnb_box>.tnb>ul{
+    display:flex; flex-direction: row; justify-content: space-between;
+    width:350px; height:30px; 
+}
+.tnb_box>.tnb>ul>li{
+    border-right:1px solid #ccc; padding-right:25px;
+}
+.tnb_box>.tnb>ul>li:nth-child(3){border-right:0px; padding-right:0px;}
+.tnb_box>.tnb>ul>li>a{
+    color:#D9D9D9;
+}
+#main_header{
+    width:100%; height:100px; background:#fff; border-bottom:1px solid #ccc;
+}
+#main_header>.innerbox{
+    width:100%; height:100px; position: relative; 
+}
+#main_header>.innerbox>h1{ 
+    width:118px; height:50px; position: absolute;
+    top:28px; left:78px;
+}
+#main_header>.innerbox>h1>a>img{
+    width:118px; height:50px;
+}
+
+#main_header>.innerbox>.toggle{
+    width:32px; height:26px; text-indent:-9999px;
+    background:url("../img/ham.png") no-repeat;
+    background-size:cover; display:none;
+}
+/*
+#main_header>.innerbox>.toggle_close{  
+    width:24px; height:24px; text-indent:-9999px; 
+    background:url("../img/close2.png") no-repeat;
+    background-size:cover; display:none;
+}*/
+#main_header>.innerbox>.gnb{
+    position:absolute; top:50%; right:50%; transform:translate(50%, -50%);
+    width:870px; height:43px; z-index:100; 
+}
+#main_header>.innerbox>.gnb>ul{
+    display:flex; flex-direction:row; justify-content: space-around;
+    width:870px; height:43px;
+}
+#main_header>.innerbox>.gnb>ul>li{
+   width:145px; height:43px; 
+}
+#main_header>.innerbox>.gnb>ul>li>a{
+    display:block; text-align:center; height:43px; line-height:43px;
+    font-size:22px;
+}
+
+#main_header>.innerbox>.gnb>ul>li>.sub{
+    width:145px; height:200px; font-size:20px; text-align:center;
+    padding-top:36px; z-index:100; display:none;
+}
+
+#main_header>.innerbox>.gnb>ul>li>.sub>ul>li>a{
+    display:block; height:50px; line-height:50px; color:#fff;
+    font-size:20px;
+    
+}
+#main_header>.innerbox>.gnb>ul>li>a:hover,
+#main_header>.innerbox>.gnb>ul>li>.sub>ul>li>a:hover{
+    color:#879B91; 
+}
+
+#main_header>.innerbox>.gnb_bg{
+    width:100%; height:220px; background:rgba(128, 127, 127, 0.7);
+    position:absolute; top:100px; display:none;
+    border-bottom:1px solid #ccc; z-index:90;
+}
+
+/* 슬라이드 부분 */
+/*#main_visual>.slide{
+    width:100%; height:740px; overflow:hidden;
+    
+}*/
+
+#main_visual>.swiper>.slide{
+    width:100%; height:740px; 
+}
+#main_visual>.swiper>.slide img{
+    width:100%; height:auto; 
+    object-fit: cover;
+}
+
+#quick{
+    width:1342px; height:140px; margin:0px auto;
+    border:1px solid #ccc;
+    background:#fff; display:flex; flex-direction:row;
+    justify-content: space-between;
+    border-top:none;
+
+}
+#quick>.hotel_box{
+    width:300px; height:140px; border-right:1px solid #ccc;
+    flex-basis:auto; 
+    
+}
+#quick>.hotel_box>p{ margin-left:52px; margin-top:35px;}
+#quick>.hotel_box>p:last-of-type{ margin-top:20px; font-size:18px; }
+
+
+#quick>.date_box{
+    width:400px; height:140px; 
+    border-right:1px solid #ccc;
+    position: relative; flex-basis:auto;
+}
+#quick>.date_box>.date,#quick>.date_box>button{
+    margin-left:52px; margin-top:21px;
+}
+#quick>.date_box>button{
+    width:250px; height:30px; font-size:18px; color:#fff;
+    font-weight:bold; background:#485D5B; margin-top:13px;
+}
+
+/*daterangepicker css*/
+#quick>.date_box>input{
+    width:400px;
+}
+.daterangepicker:after{ display:none;}
+.daterangepicker.opensleft:before{ display:none;}
+
+
+#quick>.people_box{
+    width:500px; height:140px; position: relative;
+    padding-top:34px;  flex-basis:auto;
+    box-sizing: border-box;
+    
+}
+#quick>.people_box>.people_view{
+    width:285px; height:54px; margin:0px auto; position:relative;
+    display:flex; flex-direction:row; 
+    justify-content:space-between; 
+
+}
+
+#quick>.people_box>.people_view>.people_text>span{
+    display:block;
+    width:34px; height:23px;
+    background:url("../img/down.png") no-repeat right center ; 
+    margin-left:10px;
+}
+#quick>.people_box>.people_view>.people_text:nth-of-type(2)>span{
+    margin-left:0px;
+}
+
+/*예약 버튼 */
+#quick>button{
+    width:142px; height:140px; 
+     font-weight:bold; color:#fff;
+    background:#485D5B; font-size:18px; 
+    
+}
+/*---------------------------------*/
+#quick>.people_box>.people_wrapper{
+    width:499px; height:268px; position: absolute; 
+    top:141px; left:-1px; background:#fff;
+    border:1px solid #ccc; border-top:0px;
+    display:none;
+}
+#quick>.people_box>.people_wrapper>ul{
+    display:flex; flex-direction:row; 
+    flex-wrap: wrap; justify-content: center;
+    
+}
+#quick>.people_box>.people_wrapper>ul>li{
+    width:415px; height:29px; 
+    margin-top:30px;
+    display:flex; flex-direction:row;
+}
+
+
+
+#quick>.people_box>.people_wrapper>ul>li>span{
+    margin-right:35px;
+}
+#quick>.people_box>.people_wrapper>ul>li>.child{
+    margin-left:29px;
+}
+
+#quick>.people_box>.people_wrapper>ul>li>.people_counter{
+    width:79px; height:27px; background:#fff; margin-left:11px;
+    border:1px solid #222; 
+    display:flex; justify-content:space-between;
+}
+
+#quick>.people_box>.people_wrapper>ul>li>div>.c_de,
+#quick>.people_box>.people_wrapper>ul>li>div>.c_in{
+    width:27px; height:27px; 
+    
+}
+#quick>.people_box>.people_wrapper>ul>li>div>.c_de{border-right:1px solid #222;}
+#quick>.people_box>.people_wrapper>ul>li>div>.c_in{ border-left:1px solid #222;}
+#quick>.people_box>.people_wrapper>ul>li>div>.c_de>img,
+#quick>.people_box>.people_wrapper>ul>li>div>.c_in>img{
+    margin:0px auto;
+}
+#quick>.people_box>.people_wrapper>ul>li>.close{
+    width:30px; height:30px;
+    margin-top:7px; margin-left:25px;
+    border-radius:25px; background:#363737;
+}
+#quick>.people_box>.people_wrapper>ul>li>.close>img{
+    width:16px; height:16px; margin:0px auto;
+}
+
+/*객실2,3 
+#quick>.people_box>.people_wrapper>ul>li:nth-child(2){
+    display:none;
+}
+#quick>.people_box>.people_wrapper>ul>li:nth-child(3){
+    display:none;
+}
+*/
+
+/*객실 추가 */
+#quick>.people_box>.people_wrapper>ul>li:last-of-type{
+    margin-top:27px; margin-left:35%;
+}
+#quick>.people_box>.people_wrapper>ul>li:last-of-type>.c_in{
+    width:27px; height:27px; border-radius:25px;
+    margin-left:25px; background:#363737;
+}
+#quick>.people_box>.people_wrapper>ul>li:last-of-type>.c_in>img{
+    margin:0px auto;
+}
+
+
+#quick>.people_box>.people_wrapper>.close{
+    width:36px; height:36px; border-radius:25px; 
+    margin-left:50%; margin-top:18px;
+    background:#363737;
+}
+#quick>.people_box>.people_wrapper>.close>img{
+    width:20px; height:20px; margin:0px auto; 
+}
+
+
+
+
+#package{
+    width:100%; height:275px; background:#35515C;
+    margin-top:134px; 
+}
+#package>h2{ 
+    font-size:40px; font-weight:bold; color:#fff;
+    padding-top:40px; text-align:center;
+}
+#package>.package_content{
+    width:1320px; height:407px; display:flex; justify-content: space-between;
+    margin:65px auto; 
+}
+
+#package>.package_content>.package_item>a>.package_text{
+    display:block; 
+    width:418px; height:105px; background:#fff;
+    border:1px solid #222;
+}
+#package>.package_content>.package_item>a>.package_text>h3{
+    font-size:20px; font-weight:bold; 
+    margin-left:25px; margin-top:22px;
+}
+#package>.package_content>.package_item>a>.package_text>p{
+    margin-left:25px; margin-top:14px; 
+}
+
+
+#package>.package_content>.package_item>a>div{ overflow: hidden;}
+#package>.package_content>.package_item>a>div>img{
+    transform:scale(1); transition:all 0.4s; 
+}
+#package>.package_content>.package_item>a:hover>div>img{
+    transform:scale(1.02); transition:all 0.4s;
+}
+
+
+#event{
+    width:100%; height:275px; background:#35515C;
+    margin:433px auto; 
+}
+#event>h2{
+    font-size:40px; font-weight:bold; color:#fff;
+    padding-top:40px; text-align:center;
+}
+#event>.event_content{
+    width:1320px; height:405px; display:flex; justify-content: space-between;
+    margin:65px auto; 
+}
+#event>.event_content>.event_item>a>.event_text{
+    display:block; 
+    width:418px; height:105px; background:#fff;
+    border:1px solid #222;
+}
+#event>.event_content>.event_item>a>.event_text>h3{
+    font-size:20px; font-weight:bold; 
+    margin-left:25px; margin-top:22px;
+}
+#event>.event_content>.event_item>a>.event_text>p{
+    margin-left:25px; margin-top:14px;
+}
+#event>.event_content>.event_item>a>div{ overflow:hidden;}
+#event>.event_content>.event_item>a>div>img{
+    transform:scale(1); transition:all 0.4s;
+}
+#event>.event_content>.event_item>a:hover>div>img{
+    transform:scale(1.02); transition:all 0.4s;
+}
+
+
+#info{
+    width:1219px; height:534px; margin:0px auto;
+    display:flex; flex-direction:column; flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom:111px;
+}
+#info>.room{
+    display:block; flex-basis:auto;
+    width:800px; height:534px; 
+}
+#info>.room>div>.room_text{
+    width:444px; height:65px; color:#fff;
+    position:relative; bottom:100px; z-index:100;
+    margin-left:40px; flex-basis:auto;
+}
+#info>.room>div>.room_text>h3{font-size:24px;}
+#info>.room>div>.room_text>p{font-size:14px; margin-top:13px;}
+
+
+#info>.room>div{overflow:hidden;}
+#info>.room>div>img{
+    transform:scale(1); transition:all 0.4s;
+}
+#info>.room:hover>div>img{
+    transform:scale(1.02); transition:all 0.4s;
+}
+
+#info>.dining{
+    display:block; width:368px; height:254px; position:relative;
+    overflow: hidden;
+}
+
+#info>.dining>div>.info_bg{
+    width:368px; height:254px; position: absolute;
+    top:0px; z-index:222;
+    background:#222; opacity:40%;
+}
+#info>.dining>div>.dining_text{
+    position: absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    font-size:24px; font-weight:bold;
+    color:#fff; z-index:224;
+    letter-spacing:8px; text-shadow:4px 4px 4px rgba(0,0,0,0.5);
+}
+/*다이닝 hover*/
+#info>.dining>div>img{
+    filter:saturate(100%); transform:scale(1); transition:all 0.4s;
+}
+#info>.dining>div:hover>img{ 
+    filter:saturate(200%);  transform:scale(1.02); transition:all 0.4s;
+}
+
+
+
+#info>.facilities{
+    display:block; width:368px; height:254px; 
+    position:relative; overflow:hidden;
+}
+#info>.facilities>div>.info_bg{
+    width:368px; height:254px; position:absolute;
+    top:0px; z-index:222;
+    background:#222; opacity:40%; 
+}
+#info>.facilities>div>.facilities_text{
+    position: absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    font-size:24px; font-weight:bold;
+    color:#fff; z-index:224;
+    letter-spacing:8px; text-shadow:4px 4px 4px rgba(0,0,0,0.5);
+}
+
+#info>.facilities>div>img{
+    filter:saturate(100%); transform:scale(1); transition:all 0.4s;
+}
+#info>.facilities>div:hover>img{
+    filter:saturate(200%);  transform:scale(1.02); transition:all 0.4s;
+}
+
+
+#hotel_info{
+    width:1300px; height:460px; 
+    margin:0px auto;
+}
+#hotel_info>.hotel_left{
+    width:939px; height:460px; float:left; background:#fc0;
+}
+#hotel_info>.hotel_right{
+    float:right; overflow:hidden;
+    width:361px; height:460px; background:#35515C; 
+    color:#fff;
+}
+#hotel_info>.hotel_right>h3{
+    font-size:24px; text-align:center;
+    margin:51px 0 24px;
+}
+#hotel_info>.hotel_right>p{
+    font-size:14px; margin:0 24px;
+}
+#hotel_info>.hotel_right>p:nth-of-type(2){ margin-top:21px; }
+#hotel_info>.hotel_right>p:nth-of-type(2)>span{ margin-left:34px; }
+#hotel_info>.hotel_right>p:nth-of-type(3),
+#hotel_info>.hotel_right>p:nth-of-type(4),
+#hotel_info>.hotel_right>p:nth-of-type(5){
+    margin-top:8px;
+}
+
+
+#main_footer{
+    width:100%; height:270px; background:#363737; color:#fff;
+    margin-top:140px; font-size:16px;
+}
+#main_footer>.innerbox{padding-left:150px; }
+#main_footer>.innerbox>h3{
+    width:20%; margin-bottom:73px; 
+    display:inline-block;
+}
+#main_footer>.innerbox>.footer_wrap{display:inline-block; width:70%;}
+#main_footer>.innerbox>.footer_wrap>.footer_top{
+    width:570px; height:30px; 
+    padding-top:70px;}
+#main_footer>.innerbox>.footer_wrap>.footer_top>ul{
+    display:flex; flex-direction:row;
+    justify-content:space-between;
+}
+
+#main_footer>.innerbox>.footer_wrap>.footer_top>ul>li>a{color:#fff;}
+#main_footer>.innerbox>.footer_wrap>.footer_bottom{margin-top:25px;}
+#main_footer>.innerbox>.footer_wrap>.footer_bottom>p{margin-top:9px; font-size:14px;}
+#main_footer>.innerbox>.footer_wrap>.footer_bottom>p:first-child{margin-top:0px;}
+
+
+/* tablet 갈때 헤더부분 
+@media screen and ( max-width:1300px ){
+    #main_header>.innerbox>h1{ 
+        
+    }
+    
+    #main_header>.innerbox>h1>a>img{
+        
+    }
+}
+*/
+@media screen and ( max-width:1024px ){
+    .tablet{   display:block !important;   }
+    .desk, .mobile{    display:none !important;   }
+    /*메뉴 슬라이드*/
+    .tnb_box{ 
+        width:358px; height:143px; background:#363737; position:absolute;
+        top:0px; right:-358px; z-index:110;  overflow:hidden;
+    }
+    .tnb_box.on{ right:0px;}
+    .tnb_box>.tnb{ 
+        width:313px; height:60px; 
+        position:absolute; top:72px;  right:0px; left:29px;
+    }
+    .tnb_box>.tnb>ul{
+        display:flex; flex-direction:column; flex-wrap: wrap; justify-content: space-between;
+        width:313px; height:60px; 
+    }
+    .tnb_box>.tnb>ul>li{
+        border-right:0px solid #ccc; padding-right:0px;
+    }
+    .tnb_box>.tnb>ul>li:nth-child(3){border-right:0px; padding-right:0px;}
+    .tnb_box>.tnb>ul>li>a{
+        color:#D9D9D9;
+    }
+    
+
+    #main_header{
+        width:100%; height:52px; background:#fff; border-bottom:1px solid #ccc;
+    }
+    #main_header>.innerbox{
+        width:100%; height:52px; position: relative; 
+    }
+    
+    #main_header>.innerbox>h1{ 
+        width:78px; height:34px; 
+        top:9px; left:14px;
+    }
+    
+    #main_header>.innerbox>h1>a>img{
+        width:78px; height:34px;
+    }
+
+    #main_header>.innerbox>.toggle{
+        display:block; position:absolute;
+        top:14px; right:17px;  z-index:300;  /*토글*/
+    }
+    #main_header>.innerbox>.toggle_close{  
+        display:block; position:absolute; 
+        top:14px; right:19px; z-index:200; display:none;
+    }
+    #main_header{
+        width:100%; height:52px; background:#fff; border-bottom:1px solid #ccc;
+       
+    }
+    /*
+    #main_header>.innerbox>.gnb{
+        position:absolute; top:143px; left:410px; transform:translate(0%, 0%);
+        width:358px; height:1002px; z-index:100; background:#818181; 
+    }*/
+
+    /*메뉴 슬라이드*/
+    #main_header>.innerbox>.gnb{
+        position:absolute; top:140px; right:-358px; transform:none;
+        width:358px; height:1000px; z-index:100; /**/ background:#363737;
+    }
+    /*on부분*/
+    #main_header>.innerbox>.gnb.on{ right:0px;}
+
+    #main_header>.innerbox>.gnb>ul{
+        display:flex; flex-direction: column; justify-content: left;
+        width:358px; height:1000px; margin-left:0px; 
+    }
+    
+    #main_header>.innerbox>.gnb>ul>li{
+       width:auto; height:auto; background:#d9d9d9;
+       border-bottom:1px solid #222; 
+       
+    }
+    #main_header>.innerbox>.gnb>ul>li>a{
+        text-align:left;
+        width:358px;  height:57px; line-height:57px;
+        font-size:18px; padding-left:29px;
+    }
+    #main_header>.innerbox>.gnb>ul>li>.sub{
+        display:block; width:auto; text-align:left; 
+        padding:10px 24px;  background:#fff;
+        display:none; 
+    }
+    #main_header>.innerbox>.gnb>ul>li>.sub>ul>li>a{
+        display:block; height:50px; line-height:50px; color:#222;
+        font-size:16px; 
+    } 
+    #main_header>.innerbox>.gnb>ul>li>a.active{
+        background:#242E5D; color:#fff;
+    }
+    #main_visual>.swiper>.slide{
+        width:100%; height:auto; 
+    }
+
+    #quick{
+        display:none;
+
+    }
+
+    #package{ height:190px; margin-top:60px; }
+    #package>h2{ font-size:30px; padding-top:20px;}
+    #package>.package_content{
+        width:718px; height:216px; margin:24px auto; 
+    }
+    #package>.package_content>.package_item>a>div>img{ width:224px; height:161px;}
+    
+    #package>.package_content>.package_item>a>.package_text{
+        width:222px; height:72px; 
+    
+    }
+    #package>.package_content>.package_item>a>.package_text>h3{
+        font-size:16px; margin-left:10px; margin-top:15px;
+    }
+    #package>.package_content>.package_item>a>.package_text>p{
+        font-size:12px; margin-left:10px; margin-top:4px; 
+    }
+    
+    #event{ height:190px; margin:200px auto; }
+    #event>h2{font-size:30px; padding-top:20px}
+    #event>.event_content{
+        width:718px; height:216px; display:flex; justify-content: space-between;
+        margin:24px auto; 
+    }
+    #event>.event_content>.event_item>a>div>img{ width:224px; height:161px; }
+    #event>.event_content>.event_item>a>.event_text{ width:222px; height:72px; }
+    
+   
+    #event>.event_content>.event_item>a>.event_text>h3{
+        font-size:16px; margin-left:10px; margin-top:15px;
+    } 
+    #event>.event_content>.event_item>a>.event_text>p{
+        font-size:12px; margin-left:10px; margin-top:4px;
+    }
+
+    #info{
+        width:600px; height:638px; flex-direction:row; margin:0px auto;
+    }
+
+
+    #info>.room{ width:600px; height:415px; }
+    #info>.room>div>img{ width:600px; height:415px; }
+    #info>.room>div>.room_text{ 
+        width:442px; height:56px; bottom:80px; margin-left:22px; 
+    }
+    #info>.room>div>.room_text>h3{font-size:20px;}
+    #info>.room>div>.room_text>p{margin-top:7px;}
+
+    #info>.dining{ width:274px; height:190px; }
+    #info>.dining>img{ width:274px; height:190px; }
+    #info>.dining>div>.info_bg{ width:274px; height:190px;}
+    #info>.dining>div>.dining_text{ font-size:20px; }
+
+    #info>.facilities{ width:274px; height:190px; }
+    #info>.facilities>img{ width:274px; height:190px; }
+    #info>.facilities>div>.info_bg{width:274px; height:190px;}
+    #info>.facilities>div>.facilities_text{ font-size:20px;}
+
+    #hotel_info{
+        width:100%; height:505px; 
+        margin-top:100px;
+    }
+    #hotel_info>.hotel_left{
+        width:100%; height:300px; float:left;
+    }
+    #hotel_info>.hotel_right{
+        float:right; overflow:hidden;
+        width:100%; height:auto; background:#35515C; 
+        color:#fff;
+    }
+    #hotel_info>.hotel_right>h3{
+        font-size:20px; text-align:left;
+        margin:16px 24px 6px;
+    }
+    #hotel_info>.hotel_right>p{
+        font-size:14px; margin:0 24px;
+    }
+    #hotel_info>.hotel_right>p:nth-of-type(2){ margin-top:16px; }
+    #hotel_info>.hotel_right>p:nth-of-type(2)>span{ margin-left:17px; }
+    #hotel_info>.hotel_right>p:nth-of-type(3),
+    #hotel_info>.hotel_right>p:nth-of-type(4),
+    #hotel_info>.hotel_right>p:nth-of-type(5){
+        margin-top:6px; margin-bottom:20px; float:left; 
+    }
+    
+
+    #main_footer{ height:280px; font-size:14px;}
+    #main_footer>.innerbox{ padding-left:98px; }
+    #main_footer>.innerbox>h3{
+        display:none;
+    }
+    #main_footer>.innerbox>.footer_wrap{width:100%;}
+    #main_footer>.innerbox>.footer_wrap>.footer_top{
+        width:520px; height:30px; 
+        padding-top:46px; padding-bottom:33px;
+    }
+    #main_footer>.innerbox>.footer_wrap>span{
+        display:block; height:1px; 
+        border-top:1px solid #fff; margin-left:-100px;
+    }
+    #main_footer>.innerbox>.footer_wrap>.footer_top>ul{
+        display:flex; flex-direction:row; 
+        justify-content:space-between;
+    }
+    #main_footer>.innerbox>.footer_wrap>.footer_bottom{margin-top:14px;}
+}
+
+
+
+
+
+
+@media screen and ( max-width:767px ){
+    .mobile{   display:block !important;   }
+    .desk, .tablet{    display:none !important;   }
+
+    #main_visual>.swiper>.slide{
+        width:100%; height:380px; 
+    }
+
+    #package{ height:100px; margin-top:60px; }
+    #package>h2{ font-size:20px; padding-top:18px;}
+    #package>.package_content{
+        width:100%; height:252px; margin:14px auto;
+        display:flex; flex-direction: row; justify-content:space-between; 
+        overflow-x:scroll !important; white-space: nowrap;
+       
+    }
+    #package>.package_content>.package_item:nth-child(1),
+    #package>.package_content>.package_item:nth-child(2){
+        margin-right:30px; 
+    }
+ 
+
+
+    #event{ height:100px; margin-top:260px; }
+    #event>h2{font-size:20px; padding-top:18px}
+    #event>.event_content{
+        width:100%; height:252px; display:flex; justify-content: space-between;
+        margin:24px auto; overflow-x:scroll !important;
+        
+    }
+    #event>.event_content>.event_item:nth-child(1),
+    #event>.event_content>.event_item:nth-child(2){
+        margin-right:30px; 
+    }
+ 
+    #event>.event_content>.event_item>a>div>img{ width:224px; height:161px; }
+    #event>.event_content>.event_item>a>.event_text{ width:222px; height:72px; }
+    #event>.event_content>.event_item>a>.event_text>h3{
+        font-size:16px; margin-left:10px; margin-top:15px;
+    } 
+    #event>.event_content>.event_item>a>.event_text>p{
+        font-size:12px; margin-left:10px; margin-top:4px;
+    }
+
+
+
+    #info{
+        width:360px; height:244px; flex-direction:row; margin:250px auto 170px;
+    }
+    #info>.room{ width:360px; height:244px; }
+    #info>.room>div>img{ width:360px; height:244px;  }
+    #info>.room>div>.room_text{ 
+        width:168px; height:62px; bottom:80px; margin-left:22px; 
+    }
+    #info>.room>div>.room_text>h3{font-size:16px;}
+    #info>.room>div>.room_text>p{ font-size:10px; margin-top:7px;}
+
+
+    #info>.dining{ width:166px; height:135px; }
+    #info>.dining>div>img{width:166px; height:135px; }
+    #info>.dining>div>.info_bg{ width:166px; height:135px;}
+    #info>.dining>div>.dining_text{ font-size:14px; }
+    
+
+    #info>.facilities{ width:166px; height:135px; }
+    #info>.facilities>div>img{ width:166px; height:135px;; }
+    #info>.facilities>div>.info_bg{width:166px; height:135px;}
+    #info>.facilities>div>.facilities_text{ font-size:12px;}
+
+
+
+    #hotel_info{
+        width:100%; height:470px; background:#fc0; margin-top:80px;
+ 
+    }
+    #hotel_info>.hotel_left{
+        width:100%; height:190px; float:left;
+    }
+    #hotel_info>.hotel_right{
+        float:right; overflow:hidden;
+        width:100%; height:280px; background:#35515C; 
+        color:#fff;
+    }
+    #hotel_info>.hotel_right>h3{ font-size:18px; }
+    #hotel_info>.hotel_right>p{ font-size:12px; }
+
+    #hotel_info>.hotel_right>p:nth-of-type(2){ margin-top:16px; }
+    #hotel_info>.hotel_right>p:nth-of-type(2)>span{ margin-left:17px; }
+    #hotel_info>.hotel_right>p:nth-of-type(3),
+    #hotel_info>.hotel_right>p:nth-of-type(4),
+    #hotel_info>.hotel_right>p:nth-of-type(5){
+       margin-bottom:0px; float:none; 
+    }
+    
+    #main_footer{ 
+        height:auto; font-size:14px; 
+    }
+    
+    #main_footer>.innerbox{ padding-left:64px; margin:0px auto;}
+    #main_footer>.innerbox>.footer_wrap{display:inline-block; width:100%;}
+    #main_footer>.innerbox>.footer_wrap>.footer_top{ width:80%; }
+    #main_footer>.innerbox>.footer_wrap>.footer_top>ul{
+        
+        display:flex; flex-direction:row; flex-wrap:wrap;
+        justify-content:space-around;
+    }
+   
+    #main_footer>.innerbox>.footer_wrap>.footer_bottom{ width:80%; margin-top:25px;}
+    #main_footer>.innerbox>.footer_wrap>.footer_bottom>p{margin-top:7px; font-size:14px; text-align: center;}
+    #main_footer>.innerbox>.footer_wrap>.footer_bottom>p:last-child{ margin-bottom:20px;}
+
+}
